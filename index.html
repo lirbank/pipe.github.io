@@ -1,7 +1,81 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAM0lEQVRYR+3QQREAAAQAQTLJIov4xPDZS3CzWT0bj6UBAgQIECBAgAABAgQIECBA4FvgAH1eP+FoN6KgAAAAAElFTkSuQmCC">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <div class="top">
+    <a href="https://pipehq.io/"><img src="pipe_logo_color_10x.png" alt="PIPE Logo"></a>
+    Technical Guides
+  </div>
+
+  <h1>Send from a different address or alias</h1>
+  <p>
+    This guide explains how to configure and authorize Gmail to send emails
+    from another email address you own.
+  </p>
+  <p>
+    Let's use an example. Say you signed up for PIPE with a Gmail account where
+    the primary email address is <code>john.doe@example.com</code>, but you but
+    want your outbound emails to originate from <code>john@example.com</code>.
+    If <code>john@example.com</code> isn't configured as an alias for your Gmail
+    account, you'll have to add it, which we'll go through in the next steps.
+  </p>
+  <p>
+    Note that these instructions are actually more
+    related to Gmail than to PIPE, but since PIPE relies on Gmail, and
+    configuring Gmail to send using alias email addresses sometimes can be a
+    bit confusing, we felt it would be good to put together a few steps to
+    help with that.
+  </p>
+
+  <h2>Is my alias already configured?</h2>
+  <p>
+    In a web browser, sign in to your Gmail account (eg.
+    <code>john.doe@example.com</code>) and click the <code>Compose</code>
+    button to open a New Message dialog. Here you can click on the
+    <code>From</code> field to see all email addresses the current Gmail
+    account is authorized to send from.
+  </p>
+  <p>
+    <strong>Important:</strong> If you have multiple Google Accounts, double
+    check that you're signed in with the Gmail account you signed up for PIPE
+    with (eg. <code>john.doe@example.com</code>).
+  </p>
+  <p>
+    Here's an example:
+  </p>
+  <img class="screenshot" src="gmail_new_message.png" alt="Gmail New Message Dialog">
+  <p>
+    If you see the the email address you want to use as the sending address in
+    the list, well, then you’re good to go. If not, keep reading and you should
+    be set up shortly.
+  </p>
+
+  <h2>Configure an alias email address</h2>
+  <p>
+    Follow these steps to add a new email address you own as a sending alias
+    for your Gmail account.
+    <br>
+  </p>
+  <p>
+    Substitute <code>john.doe@example.com</code> with the primary email of your
+    Gmail account (the account you signed up for PIPE with) and
+    <code>john@example.com</code> with the email address you want to add as an
+    alias.
+  </p>
+  <ol>
+    <li>Navigate to <a href="http://mail.google.com/a/example.com" target="_blank">mail.google.com/a/example.com</a> and sign in with <code>john.doe@example.com</code></li>
+    <li>Click <code>Settings</code> (cogwheel icon, top right corner) and then <code>Settings</code></li>
+    <li>Select the <code>Accounts</code> tab</li>
+    <li>Check that <code>john@example.com</code> is not already in the list</li>
+    <li>Click <code>Add another email address you own</code></li>
+    <li>In the dialog window, type <code>john@example.com</code> as the <code>Email address</code> and leave <code>Treat as an alias</code> checked. Click <code>Next Step</code></li>
+    <li>On the second page, stay with the default SMTP settings <code>Send through example.com Mail (easier to set up)</code>, click <code>Next Step</code></li>
+    <li>On the third page, click <code>Send Verification</code> and close the dialog window.</li>
+    <li>Check your email for the verification email and click the approval link.</li>
+  </ol>
 </body>
 </html>
